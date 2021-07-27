@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 900px;
+            background-color: white;
+        }
+        
+        .father {
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            /* background-color: gray; */
+            font-size: 100px;
+            text-align: center;
+            font-size: 100px;
+            line-height: 300px;
+            position: relative;
+            /* transform: rotateY(30deg) rotateX(30deg); */
+            /* perspective: 900px; */
+            transform-style: preserve-3d;
+            transition: 50s;
+        }
+        
+        .father:hover .box {
+            opacity: 0.5;
+        }
+        
+        .father:hover {
+            transform: rotateX(5000deg) rotateY(-4000deg);
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 3s;
+            opacity: 0;
+        }
+        
+        .father:hover .box1 {
+            background-color: pink;
+            transform: translateZ(300px);
+            background-image: url(./QQ图片20210623154811.jpg);
+            background-size: contain;
+        }
+        
+        .father:hover .box2 {
+            background-color: green;
+            transform: translateZ(-300px);
+            background-image: url(./QQ图片20210623154811.jpg);
+            background-size: contain;
+        }
+        
+        .father:hover .box3 {
+            background-color: purple;
+            transform: translateX(-300px) rotateY(-90deg);
+            background-image: url(./QQ图片20210623154811.jpg);
+            background-size: contain;
+        }
+        
+        .father:hover .box4 {
+            background-color: red;
+            transform: translateX(300px) rotateY(-90deg);
+            background-image: url(./QQ图片20210623154811.jpg);
+            background-size: contain;
+        }
+        
+        .father:hover .box5 {
+            background-color: rosybrown;
+            transform: translateY(-300px) rotateX(-90deg);
+            background-image: url(./QQ图片20210623154811.jpg);
+            background-size: contain;
+        }
+        
+        .father:hover .box6 {
+            background-color: palegoldenrod;
+            transform: translateY(300px) rotateX(-90deg);
+            background-image: url(./QQ图片20210623154811.jpg);
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+
+    </div>
+</body>
+
+</html>

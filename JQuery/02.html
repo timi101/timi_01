@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+        }
+        
+        body {
+            background-color: rosybrown;
+            filter: grayscale(100%);
+        }
+        
+        .box {
+            width: 100px;
+            height: 300px;
+            margin: 50px;
+            background-color: pink;
+            float: left;
+            color: #fff;
+            transition: 1s;
+            text-align: center;
+            font-size: 16px;
+            line-height: 300px;
+            margin: 0 10px;
+            border-radius: 20px;
+            /*阴影
+            box=shadow:上下偏移 水平偏移 模糊大小 模糊程度 颜色内/外阴影
+            */
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);
+            background-image: url('./QQ图片20210713124459.jpg');
+            background-repeat: no-repeat;
+            /*
+          背景图大小：backgroud-size:宽度100%  高度100%
+                                      cover 自适应最短边
+                                      contain 自适应最长边  */
+            background-size: contain;
+        }
+        
+        .active {
+            width: 300px;
+            filter: blur(20%);
+        }
+        
+        .box1 {
+            background-color: aqua;
+            background-size: cover;
+        }
+        
+        .box2 {
+            background-color: gold;
+            background-size: cover;
+        }
+        
+        .box3 {
+            background-color: gray;
+            background-size: cover;
+        }
+        
+        .box4 {
+            background-color: goldenrod;
+            background-size: cover;
+        }
+        
+        .box5 {
+            background-color: green;
+            background-size: cover;
+        }
+        
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box active box1">鞍山西安市新</div>
+        <div class="box box2">鞍山西安市新</div>
+        <div class="box box3">鞍山西安市新</div>
+        <div class="box box4">鞍山西安市新</div>
+        <div class="box box5">鞍山西安市新</div>
+    </div>
+
+
+
+    <script src="./jquery-3.6.0.min.js">
+    </script>
+    <script>
+        $('.box').mousemove(function() {
+            $('.box').removeClass('active')
+            $(this).addClass('active')
+        })
+    </script>
+</body>
+
+</html>

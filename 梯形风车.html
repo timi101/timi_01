@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            /* transition: 2s;
+            margin: 50px auto; */
+            /*这个是过渡和居中元素*/
+            animation: rotate 0.1s infinite ease-in;
+            /*这是动画*/
+        }
+        /*.father:hover {
+            transform: rotate(720deg)/*旋转720度，加一个hover选择器*/
+        /*         
+        @keyframes rotate {
+            form {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        } */
+        
+        .father div {
+            float: left;
+        }
+        
+        .box1 {
+            height: 50px;
+            /*(看梯形是竖着还是横着，竖着就是有高度没有宽度，横着就是有宽度没有高度 )*/
+            width: 0px;
+            border-width: 50px;
+            border-style: solid;
+            border-color: transparent pink transparent transparent;
+            /*这里的方向是上右下左*/
+            border-bottom-width: 0;
+        }
+        
+        .box2 {
+            height: 0px;
+            width: 50px;
+            border-width: 50px;
+            border-style: solid;
+            border-color: transparent transparent green transparent;
+            border-left-width: 0;
+        }
+        
+        .box3 {
+            height: 0px;
+            width: 50px;
+            border-width: 50px;
+            border-style: solid;
+            border-color: blue transparent transparent transparent;
+            border-right-width: 0;
+        }
+        
+        .box4 {
+            height: 50px;
+            width: 0px;
+            border-width: 50px;
+            border-style: solid;
+            border-color: transparent transparent transparent red;
+            border-top-width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+
+</html>

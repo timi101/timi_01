@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        
+        .box1 {
+            width: 100px;
+            height: 50px;
+            /* border: 1px solid blueviolet; */
+            border-radius: 100px 100px 0 0;
+            background-color: tomato;
+            /* border-top-left-radius: 25px;
+            border-top-left-radius: 25px; */
+            margin: 0 auto;
+            position: relative;
+            /* overflow: hidden; */
+            animation: rotate1 1s infinite;
+            transform-origin: bottom center;
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 50px;
+            /* border: 1px solid blueviolet; */
+            border-radius: 0 0 100px 100px;
+            background-color: tomato;
+            /* border-top-left-radius: 25px;
+            border-top-left-radius: 25px; */
+            margin: 0 auto;
+            position: relative;
+            /* overflow: hidden; */
+            animation: rotate2 1s infinite;
+            transform-origin: top center;
+        }
+        
+        .doudou1 {
+            position: absolute;
+            top: 50px;
+            left: 1100px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            /* opacity: 0; */
+            animation: move 1s infinite;
+        }
+        /* .doudou2 {
+            position: absolute;
+            top: 50px;
+            left: 1000px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(255, 0, 0, 0.63);
+           
+            animation: move .3s infinite;
+            animation-delay: .2s;
+        } */
+        
+        .doudou3 {
+            position: absolute;
+            top: 50px;
+            left: 900px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            /* opacity: 0; */
+            animation: move 1s infinite;
+            animation-delay: .5s;
+        }
+        
+        @keyframes rotate1 {
+            0% {
+                transform: rotate(-45deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-45deg);
+            }
+        }
+        
+        @keyframes rotate2 {
+            0% {
+                transform: rotate(45deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(45deg);
+            }
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translate(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(-80px);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-120px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+    </div>
+    <div class="box2">
+    </div>
+    <div class="doudou1"></div>
+    <div class="doudou2"></div>
+    <div class="doudou3"></div>
+
+</body>
+
+</html>

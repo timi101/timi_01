@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+            width: 310px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        
+        ul li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        
+        .active {
+            background: pink;
+            color: #fff;
+        }
+        
+        .txt {
+            width: 304px;
+            height: 500px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .txt div {
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .txt-active {
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="box">
+        <li class="active">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+    </ul>
+    <div class="txt">
+        <div class="tab txt-active">tab1的展示内容</div>
+        <div class="tab">tab2的展示内容</div>
+        <div class="tab">tab3的展示内容</div>
+    </div>
+</body>
+
+</html>
+<script>
+    // document.getElementById()
+    // var box = document.getElementById('box')
+    // box.style.background = 'pink'
+    // box.className = 'active'
+
+    // 点击事件
+    // box.onclick = function() {
+    //     alert(888);
+    // }
+
+    var liList = document.getElementsByTagName('li')
+    var tabPageList = document.getElementsByClassName('tab')
+
+    for (var i = 0; i < liList.length; i++) {
+        // console.log(liList[i]);
+        liList[i].index = i
+        liList[i].onclick = function() {
+            // 获取当前对应的tab索引
+            console.log(this.index);
+            // 获取当前应当出现的tab页面
+
+            // 处理tabpage切换逻辑
+            var tabPage = tabPageList[this.index]
+            console.log(tabPage);
+
+            for (var k = 0; k < tabPageList.length; k++) {
+                tabPageList[k].className = 'tab'
+            }
+
+            tabPage.className = tabPage.className + ' txt-active'
+
+
+            // 处理tab标签切换逻辑
+
+            for (var j = 0; j < liList.length; j++) {
+                liList[j].className = ''
+            }
+            this.className = 'active'
+        }
+    }
+
+
+    // 思路： tab标签切换  并且下面的tabpage切换  切换的时候给当前的tab加上名字 active
+
+    // 获取到元素 找到当前点击的元素 通过给元素绑定index属性进行关联
+    // 当前点击到的元素 添加上class名字 并且给其他所有同样的元素去掉class名字
+    // 注意，修改class名字不要把原来的名字覆盖
+</script>

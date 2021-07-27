@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            position: relative;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+        }
+        
+        .active {
+            background-color: greenyellow;
+        }
+        
+        .box4 {
+            position: absolute;
+            right: 19px;
+            top: 120px;
+        }
+        
+        .box5 {
+            position: absolute;
+            right: 19px;
+            top: 240px;
+        }
+        
+        .box6 {
+            position: absolute;
+            right: 139px;
+            top: 240px;
+        }
+        
+        .box7 {
+            position: absolute;
+            right: 259px;
+            top: 240px;
+        }
+        
+        .box8 {
+            position: absolute;
+            right: 379px;
+            top: 240px;
+        }
+        
+        .start {
+            float: left;
+            width: 50px;
+            height: 30px;
+            background-color: gray;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 30px;
+            color: azure;
+            position: absolute;
+            left: 32%;
+            top: 32%;
+        }
+        
+        .end {
+            float: left;
+            width: 50px;
+            height: 30px;
+            background-color: gray;
+            text-align: center;
+            line-height: 30px;
+            color: azure;
+            position: absolute;
+            left: 50%;
+            top: 32%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box0">孙迎</div>
+        <div class="box box1">卢文瑾</div>
+        <div class="box box2">仇静微</div>
+        <div class="box box3">孙迎</div>
+        <div class="box box4">仇静微</div>
+        <div class="box box5">孙迎</div>
+        <div class="box box6">孙迎</div>
+        <div class="box box7">仇静微</div>
+        <div class="box box8">童敏</div>
+        <div class="box box9">卢文瑾</div>
+        <div class="start">开始</div>
+        <div class="end">结束</div>
+
+    </div>
+
+
+    <script src="./jquery-3.6.0.min.js">
+    </script>
+    <script>
+        // var nowIndex = -1;
+        // var timer = null;
+        // var round = 0;
+        // var n = 0; //跳了几个格子
+        // var priceIndex
+
+
+        // function move() {
+        //     clearTimeout(timer)
+        //     nowIndex = nowIndex + 1;
+        //     n = n + 1;
+        //     if (n % 10 == 0) {
+        //         round = round + 1
+        //     }
+        //     if (round >= 8) {
+        //         timer = setTimeout(() => {
+        //             move()
+        //         }, 1000);
+        //     } else if (round >= 3) {
+        //         timer = setTimeout(() => {
+        //             move()
+        //         }, 50);
+        //     } else {
+        //         timer = setTimeout(() => {
+        //             move()
+        //         }, 100);
+        //     }
+
+
+        //     $('.box').removeClass('active')
+        //     $('.box').filter('.box' + nowIndex).addClass('active')
+
+        //     if (nowIndex == $('.box').length - 1) {
+        //         nowIndex = -1
+        //     }
+        //     timer = setTimeout(function() {
+        //         move();
+        //     }, 70)
+
+        //     if (nowIndex == priceIndex && round > 8) {
+        //         clearTimeout(timer)
+        //         setTimeout(function() {
+        //             alert('中奖了')
+        //         }, 400)
+        //     }
+        // }
+        // $('.start').click(function() {
+        //         priceIndex = Math.floor(Math.random() * $('.box').length)
+        //         move();
+        //     })
+        // $('.end').click(function() {
+        //     clearTimeout(timer)
+        // })
+
+
+
+
+        var nowIndex = -1;
+        var timer = null;
+        var round = 0; // 转了几圈
+        var n = 0 // 跳了几个格子
+        var priceIndex // 判断抽奖结果
+
+        function move() {
+            clearTimeout(timer)
+            nowIndex = nowIndex + 1;
+            n = n + 1;
+            if (n % 10 == 0) {
+                round = round + 1
+            }
+            if (round >= 8) {
+                timer = setTimeout(() => {
+                    move()
+                }, 1000);
+            } else if (round >= 3) {
+                timer = setTimeout(() => {
+                    move()
+                }, 50);
+            } else {
+                timer = setTimeout(() => {
+                    move()
+                }, 100);
+            }
+
+            $('.box').removeClass('active')
+            $('.box').filter('.box' + nowIndex).addClass('active')
+            if (nowIndex == $('.box').length - 1) {
+                nowIndex = -1
+            }
+
+            // 抽到结果 停止抽奖
+            if (nowIndex == priceIndex && round > 8) {
+                clearTimeout(timer)
+                setTimeout(() => {
+                    alert('中奖了')
+                }, 400);
+            }
+        }
+        $('.start').click(function() {
+            priceIndex = Math.floor(Math.random() * $('.box').length)
+            console.log(priceIndex);
+            move()
+        })
+    </script>
+</body>
+
+</html>

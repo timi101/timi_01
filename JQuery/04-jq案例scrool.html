@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rosybrown;
+            width: 100px;
+        }
+        
+        .box {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            bottom: 20px;
+            right: 20px;
+            transition: .3;
+        }
+        
+        .hide {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <div class="box ">hhh</div>
+    <script src="./jquery-3.6.0.min.js">
+    </script>
+    <script>
+        $(window).scroll(function() {
+                if ($(window).scrollTop() > 100) {
+                    $('.box').show
+                    $('.box').click(function() {
+                        $('html').animate({
+                            scrollTop: 0
+                        })
+                    })
+                } else {
+                    $('.box').addClass('hide')
+
+                }
+            })
+            // $('.box').click()
+            //shou 让元素 出现
+            //hide让元素隐藏
+            //toggle切换隐藏
+            //$("p").slideToggle("slow");     用600毫秒缓慢的将段落滑上或滑下
+            //$("p").fadeOut("slow");  淡出
+            //animate不能改颜色
+    </script>
+</body>
+
+</html>

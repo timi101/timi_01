@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 500px;
+            margin: 50px auto;
+            position: relative;
+        }
+        
+        .box {
+            width: 800px;
+            height: 800px;
+            border-radius: 10px;
+            color: beige;
+            line-height: 800px;
+            text-align: center;
+            font-size: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            /* transition: 2s; */
+        }
+        
+        .active {
+            opacity: 1;
+        }
+        
+        .box1 {
+            background-color: aqua;
+        }
+        
+        .box2 {
+            background-color: pink;
+        }
+        
+        .box3 {
+            background-color: gray;
+        }
+        
+        .box4 {
+            background-color: green;
+        }
+        
+        .box5 {
+            background-color: greenyellow;
+        }
+        
+        .pre,
+        .next {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            position: absolute;
+            background-color: #fff;
+            color: #000;
+            line-height: 100px;
+            font-size: 40px;
+            text-align: center;
+            top: 50%;
+            margin-top: -50px;
+        }
+        
+        .pre {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box box1 active">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="pre">&lt</div>
+        <div class="next">&gt</div>
+    </div>
+    <script src="./jquery-3.6.0.min.js">
+    </script>
+    <script>
+        var curIndex = 0;
+        $('.next').click(function() {
+            $('.box').removeClass('active')
+            curIndex = curIndex + 1;
+            if (curIndex == $('.box').length) {
+                curIndex = 0;
+            }
+            $('.box').eq(curIndex).addClass('active')
+
+        })
+
+        $('.pre').click(function() {
+                $('.box').removeClass('active')
+                curIndex = curIndex - 1;
+                if (curIndex == -1) {
+                    curIndex = $('.box').length - 1;
+                }
+                $('.box').eq(curIndex).addClass('active')
+            })
+            // timer = setInterval(function() {
+            //     $('.box').removeClass('active')
+            //     curIndex = curIndex + 1;
+            //     if (curIndex == $('box').length) {
+            //         curIndext = 0;
+            //     }
+            //     $('.box').eq(curIndex).addClass('active')
+            // }, 2000)
+    </script>
+</body>
+
+</html>

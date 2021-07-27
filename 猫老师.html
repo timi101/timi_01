@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body,
+        html {
+            background: pink;
+        }
+        
+        .mao {
+            width: 400px;
+            margin: 50px auto;
+            position: relative;
+        }
+        
+        .mao-head {
+            width: 400px;
+            height: 342px;
+            background: #f6f4f2;
+            border: 2px solid #2e2e2e;
+            border-radius: 50% 50% 35% 35%;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+        
+        .huawen {
+            height: 180px;
+            width: 0;
+            border-left: 90px solid #f0ac6b;
+            border-right: 90px solid #8d8d8d;
+            border-radius: 0% 0% 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 110px;
+        }
+        
+        .erduo {
+            width: 374px;
+            height: 120px;
+            position: absolute;
+            top: -6px;
+            left: 10px;
+        }
+        
+        .zuo-er {
+            width: 160px;
+            height: 200px;
+            border: 2px solid #2e2e2e;
+            background-color: #f6f4f2;
+            border-radius: 4% 80% 0% 50%;
+            position: absolute;
+            top: 0;
+            left: -20px;
+            transform: rotate(-15deg);
+            transition: 1s;
+        }
+        
+        .you-er {
+            width: 160px;
+            height: 180px;
+            border: 2px solid #2e2e2e;
+            background-color: #f6f4f2;
+            border-radius: 80% 4% 50% 0%;
+            position: absolute;
+            top: 0;
+            right: -20px;
+            transform: rotate(15deg);
+            transition: 1s;
+        }
+        
+        .yanjing {
+            width: 300px;
+            height: 60px;
+            position: absolute;
+            overflow: hidden;
+            top: 200px;
+            left: 50px;
+            z-index: 20;
+        }
+        
+        .yanquan {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #2e2e2e;
+            border-radius: 50%;
+            background: #f6f4f2;
+            position: absolute;
+            overflow: hidden;
+        }
+        
+        .yandi {
+            width: 180px;
+            height: 100px;
+            border: 2px solid #2e2e2e;
+            border-radius: 50%;
+            background: #f6f4f2;
+            position: absolute;
+            top: 50px;
+            left: -40px;
+            transition: 1s;
+        }
+        
+        .tongkong {
+            width: 30px;
+            height: 100px;
+            background: #2e2e2e;
+            margin-left: 35px;
+            margin-top: -2px;
+            transition: 1s;
+        }
+        
+        .hong {
+            width: 50px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(255, 0, 0, 0.5);
+            position: absolute;
+            top: 39px;
+            left: 25px;
+            opacity: 0;
+        }
+        
+        .youyan {
+            position: absolute;
+            right: 104px;
+            top: 0;
+        }
+        
+        .face {
+            width: 380px;
+            height: 80px;
+            position: absolute;
+            top: 186px;
+            z-index: 30;
+            left: 10px;
+        }
+        
+        .hua1 {
+            width: 30px;
+            height: 10px;
+            border-top: 6px #e53941 solid;
+            border-radius: 30% 80% 20% 50%;
+            transform: rotate(20deg);
+            margin-left: 20px;
+        }
+        
+        .hua2 {
+            width: 20px;
+            height: 6px;
+            background: #e53941;
+            border-radius: 50%;
+            transform: rotate(20deg);
+            margin-left: 20px;
+        }
+        
+        .hua3 {
+            width: 32px;
+            height: 10px;
+            border-bottom: 4px solid #e53941;
+            border-radius: 30% 0% 90% 30%;
+            transform: rotate(20deg);
+            margin-left: 10px;
+        }
+        
+        .hua4 {
+            width: 26px;
+            height: 20px;
+            border-bottom: 4px solid #e53941;
+            border-radius: 30% 0% 90% 30%;
+            transform: rotate(30deg);
+            margin-top: 26px;
+            margin-left: 20px;
+        }
+        
+        .hua5 {
+            width: 22px;
+            height: 10px;
+            border-bottom: 3px solid #e53941;
+            border-radius: 0 0 50% 30%;
+            transform: rotate(-15deg);
+            margin-left: 25px;
+            margin-top: -5px;
+        }
+        
+        .face-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: rotateY(180deg);
+        }
+        
+        .bizi {
+            width: 30px;
+            height: 10px;
+            border-bottom: 8px solid #2e2e2e;
+            border-radius: 0 0 50% 50%;
+            position: absolute;
+            top: 260px;
+            z-index: 30;
+            left: 50%;
+            margin-left: -15px;
+        }
+        
+        .zui-box {
+            width: 200px;
+            height: 30px;
+            /* background: yellow; */
+            position: absolute;
+            z-index: 30;
+            top: 270px;
+            left: 50%;
+            margin-left: -87px;
+            overflow: hidden;
+        }
+        
+        .zui {
+            margin-left: 85px;
+            margin-top: 14px;
+            position: relative;
+        }
+        
+        .zui1 {
+            width: 4px;
+            height: 8px;
+            background: #2e2e2e;
+            margin-top: -6px;
+            position: absolute;
+            top: -5px;
+            left: 0;
+        }
+        
+        .zui2 {
+            width: 50px;
+            height: 40px;
+            border-right: 4px solid #2e2e2e;
+            border-bottom: 4px solid #2e2e2e;
+            border-radius: 0% 40% 50% 20%;
+            position: absolute;
+            top: -32px;
+            left: -49px;
+            transition: 1s;
+        }
+        
+        .zui3 {
+            width: 50px;
+            height: 40px;
+            border-bottom: 4px solid #2e2e2e;
+            border-left: 4px solid #2e2e2e;
+            border-radius: 40% 0% 20% 50%;
+            position: absolute;
+            top: -32px;
+            left: 0px;
+            transition: 1s;
+        }
+        
+        .mao:hover .zuo-er {
+            transform: rotate(0);
+        }
+        
+        .mao:hover .you-er {
+            transform: rotate(0);
+        }
+        
+        .mao:hover .yandi {
+            top: 35px;
+        }
+        
+        .mao:hover .tongkong {
+            width: 50px;
+            margin-left: 25px;
+        }
+        
+        .mao:hover .hong {
+            opacity: 1;
+            transition: 1s;
+        }
+        
+        .mao:hover .zui2 {
+            width: 30px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            left: -31px;
+        }
+        
+        .mao:hover .zui3 {
+            width: 30px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mao">
+        <div class="mao-head">
+            <div class="huawen"></div>
+        </div>
+        <div class="erduo">
+            <div class="zuo-er"></div>
+            <div class="you-er"></div>
+        </div>
+        <div class="yanjing">
+            <div class="zuoyan">
+                <div class="yanquan">
+                    <div class="tongkong"></div>
+                </div>
+                <div class="yandi"></div>
+                <div class="hong"></div>
+            </div>
+            <div class="youyan">
+                <div class="yanquan">
+                    <div class="tongkong"></div>
+                </div>
+                <div class="yandi"></div>
+                <div class="hong"></div>
+
+            </div>
+        </div>
+        <div class="face">
+            <div class="face-left">
+                <div class="hua1"></div>
+                <div class="hua2"></div>
+                <div class="hua3"></div>
+                <div class="hua4"></div>
+                <div class="hua5"></div>
+            </div>
+            <div class="face-right">
+                <div class="hua1"></div>
+                <div class="hua2"></div>
+                <div class="hua3"></div>
+                <div class="hua4"></div>
+                <div class="hua5"></div>
+            </div>
+        </div>
+        <div class="bizi">
+
+        </div>
+        <div class="zui-box">
+            <div class="zui">
+                <div class="zui1"></div>
+                <div class="zui2"></div>
+                <div class="zui3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

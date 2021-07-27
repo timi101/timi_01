@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p>嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <p class="p">嗷嗷叫西南角师兄师嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊嗷嗷叫西南角师兄师姐熊姐熊</p>
+    <a href="https://www.baidu.com/">百度</a>
+    <script src="./jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        //选择body
+        // var body = $('body')
+        // console.log(body);
+
+        // var p = $('.p')
+        // console.log(p);
+
+        // var p = $('p')
+        // console.log(p);
+
+        //插入标签
+        $('<h1>标题标签</h1>').appendTo($('.p'))
+
+
+        //each 支持链式
+
+        // var p = $('p')
+        // p.each(function() {
+        //     $(this).css('font-size', '30px')
+        // })
+
+
+        // $('p').each(function() {
+        //     $(this).css('font-size', '30px')
+        // }).each(function() {
+        //     $(this).css('background-color', 'pink')
+        // })
+
+        //attr 设置或返回被选元素的属性值
+        // $("a").attr("herf"); //获取属性
+
+        $('a').attr('href', 'https://www.4399.com') //设置属性
+
+        $('a').attr('href', 'https://www.4399.com').removeAttr('href'); //移除属性
+
+        //addClass(class|fn) 添加class名字
+        $('a').attr('href', 'https://www.4399.com').addClass('box contain')
+
+        //removeClass([class|fn])移除class名字
+        $('a').attr('href', 'https://www.4399.com').addClass('box contain').removeClass('box')
+
+        //toggleClass(class|fn[,sw]) 如果存在（不存在）就删除（添加）一个类。
+        $('a').toggleClass('box')
+
+        //html 可以设置或获取访问、、到元素内html内容
+        console.log($('.p').html);
+        $('a').html('去新浪')
+            //获取元素的偏移
+        console.log($('.p').offset());
+        //shou 让元素 出现
+        //hide让元素隐藏
+        //toggle切换隐藏
+        //$("p").slideToggle("slow");     用600毫秒缓慢的将段落滑上或滑下
+        //$("p").fadeOut("slow");  淡出
+        //animate不能改颜色
+    </script>
+
+</body>
+
+</html>

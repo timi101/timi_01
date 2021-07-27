@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body {
+            height: 1000px;
+        }
+        
+        .father {
+            width: 280px;
+            height: 400px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            position: relative;
+            animation: rotate infinite 6s linear;
+        }
+        
+        .box {
+            width: 280px;
+            height: 400px;
+            position: absolute;
+            top: 50px;
+            right: 0;
+        }
+        
+        .box:nth-of-type(1) {
+            background-color: rgb(159, 130, 238);
+            transform: rotateY(36deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(2) {
+            background-color: violet;
+            transform: rotateY(72deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(3) {
+            background-color: violet;
+            transform: rotateY(108deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(4) {
+            background-color: violet;
+            transform: rotateY(144deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(5) {
+            background-color: violet;
+            transform: rotateY(180deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(6) {
+            background-color: violet;
+            transform: rotateY(216deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(7) {
+            background-color: violet;
+            transform: rotateY(252deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(8) {
+            background-color: violet;
+            transform: rotateY(288deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(9) {
+            background-color: violet;
+            transform: rotateY(324deg) translateZ(500px);
+        }
+        
+        .box:nth-of-type(9) {
+            background-color: violet;
+            transform: rotateY(360deg) translateZ(500px);
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0) rotateY(0);
+            }
+            25% {
+                transform: rotateX(20deg) rotateY(180deg);
+            }
+            50% {
+                transform: rotateX(0) rotateY(360deg);
+            }
+            75% {
+                transform: rotateX(-20deg) rotateY(540deg);
+            }
+            100% {
+                transform: rotateX(0) rotateY(720deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+</body>
+
+</html>

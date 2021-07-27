@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.main {
+    margin: 0 auto;
+    height: 100%;
+    width: 480px;
+    background: url("./images/bg.jpg");
+}
+
+.my-plane {
+    width: 98px;
+    height: 122px;
+    background: url("./images/me.png");
+    position: absolute;
+}
+
+.bullet {
+    width: 7px;
+    height: 18px;
+    background: url("./images/bullet.png");
+    position: absolute;
+}
+
+.bullet-die {
+    width: 59px;
+    height: 36px;
+    background: url("./images/die1.png") no-repeat;
+    position: absolute
+}
+
+.enemy-small {
+    width: 59px;
+    height: 36px;
+    background: url("./images/plain1.png") no-repeat;
+    position: absolute
+}
+
+.enemy-middle {
+    width: 70px;
+    height: 92px;
+    background: url("./images/plain2.png") no-repeat;
+    position: absolute
+}
+
+.enemy-large {
+    width: 165px;
+    height: 256px;
+    background: url("./images/plain3.png") no-repeat;
+    position: absolute
+}

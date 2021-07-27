@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            margin: 50px auto;
+            perspective: 900px;
+            /* transform: rotateY(89deg); */
+            transform-style: preserve-3d;
+        }
+        
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: 1s;
+        }
+        
+        .father:hover .son {
+            /* transform: rotate(30deg) translate(100px, 100px); */
+            transform: translateZ(100px);
+            transform: rotateY(80deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>
+<!-- 
+    2d 平移 缩放 旋转
+    transform : translate(x,y)
+                translateZ()  正：向前   负：向后
+
+                旋转
+                rotate()   就是沿着z轴旋转
+                rotateX()  绕着X轴转   正角度  上面朝里 下面朝外
+                rotateY()  绕着Y轴转   正角度  右边朝里 左边朝外
+                 scale
+景深 perspective:给元素添加近大远小的特点  900px -1200px
+    transform-style: preserve-3d;写在父元素上
+            
+->

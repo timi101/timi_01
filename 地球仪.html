@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        .father {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 2s;
+            animation: rotate1 infinite 5s linear;
+            /* animation: rotate2 infinite 5s linear; */
+        }
+        
+        .box {
+            width: 600px;
+            height: 600px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+        }
+        
+        .box:nth-of-type(1) {
+            transform: rotateY(20deg);
+        }
+        
+        .box:nth-of-type(2) {
+            transform: rotateY(40deg);
+        }
+        
+        .box:nth-of-type(3) {
+            transform: rotateY(60deg);
+        }
+        
+        .box:nth-of-type(4) {
+            transform: rotateY(80deg);
+        }
+        
+        .box:nth-of-type(5) {
+            transform: rotateY(100deg);
+        }
+        
+        .box:nth-of-type(6) {
+            transform: rotateY(120deg);
+        }
+        
+        .box:nth-of-type(7) {
+            transform: rotateY(140deg);
+        }
+        
+        .box:nth-of-type(8) {
+            transform: rotateY(160deg);
+        }
+        
+        .box:nth-of-type(9) {
+            transform: rotateY(180deg);
+        }
+        
+        .box:nth-of-type(10) {
+            transform: rotateX(90deg);
+        }
+        
+        .box:nth-of-type(11) {
+            transform: translateY(-75px) rotateX(90deg) scale(0.97);
+        }
+        
+        .box:nth-of-type(12) {
+            transform: translateY(-150px) rotateX(90deg) scale(0.865);
+        }
+        
+        .box:nth-of-type(13) {
+            transform: translateY(-225px) rotateX(90deg) scale(0.65);
+        }
+        
+        .box:nth-of-type(14) {
+            transform: translateY(-300px) rotateX(90deg) scale(0);
+        }
+        
+        .box:nth-of-type(15) {
+            transform: translateY(75px) rotateX(90deg) scale(0.97);
+        }
+        
+        .box:nth-of-type(16) {
+            transform: translateY(150px) rotateX(90deg) scale(0.865);
+        }
+        
+        .box:nth-of-type(17) {
+            transform: translateY(225px) rotateX(90deg) scale(0.65);
+        }
+        
+        .box:nth-of-type(18) {
+            transform: translateY(300px) rotateX(90deg) scale(0.0);
+        }
+        
+        .big-box {
+            width: 600px;
+            height: 600px;
+            perspective: 900px;
+            margin: 0 auto;
+            transform: rotateZ(22deg);
+            position: relative;
+        }
+        
+        .father:hover {
+            transform: rotateX(30deg) rotateY(30deg);
+        }
+        
+        @keyframes rotate1 {
+            from {
+                transform: rotateY(0);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        /* @keyframes rotate2 {
+            from {
+                transform: rotateX(0);
+            }
+            to {
+                transform: rotateX(360deg);
+            }
+        } */
+        
+        .zhuzi {
+            position: absolute;
+            height: 710px;
+            width: 5px;
+            background: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .huan {
+            position: absolute;
+            width: 325px;
+            height: 660px;
+            border-bottom-right-radius: 325px;
+            border-top-right-radius: 325px;
+            border: 5px solid #fff;
+            border-left: none;
+            top: -34px;
+            left: 300px;
+        }
+        
+        .foot {
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            bottom: -95px;
+            left: 264px;
+            background: #fff;
+            transform: rotate(-22deg);
+        }
+        
+        .footzhuzi {
+            width: 5px;
+            height: 42px;
+            position: absolute;
+            left: 305px;
+            bottom: -94px;
+            transform: rotate(-22deg);
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big-box">
+        <div class="father">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>>
+        <div class="zhuzi"></div>
+        <div class="huan"></div>
+        <div class="foot">
+
+        </div>
+        <div class="footzhuzi"></div>
+    </div>
+</body>
+
+</html>>

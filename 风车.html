@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 50px auto;
+            width: 700px;
+            position: relative;
+            animation: rotate 5s linear infinite;
+        }
+        
+        .inner {
+            width: 100%;
+        }
+        
+        .ren1,
+        .ren2,
+        .ren3,
+        .ren4 {
+            position: absolute;
+            animation: smallrotate 5s infinite linear;
+            transform-origin: top center;
+        }
+        
+        .ren1 {
+            top: 70px;
+            left: 50%;
+            margin-left: -50px;
+        }
+        
+        .ren2 {
+            left: 10px;
+            top: 50%;
+            margin-top: 5px;
+        }
+        
+        .ren3 {
+            right: 10px;
+            top: 50%;
+            margin-top: 5px;
+        }
+        
+        .ren4 {
+            right: 10px;
+            top: 50%;
+            margin-top: 5px;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes smallrotate {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/风车/1.png" class="inner" alt="">
+        <img src="images/风车/2.png" class="ren1" alt="">
+        <img src="images/风车/3.png" class="ren2" alt="">
+        <img src="images/风车/4.png" class="ren3" alt="">
+        <img src="images/风车/4.png" class="ren4" alt="">
+    </div>
+</body>
+
+</html>
